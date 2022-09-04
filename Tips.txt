@@ -1,0 +1,12 @@
+##USE THIS TO HAVE LOGSTASH REFRESH WITHOUT RESTARTING IF .conf FILE IS EDITED
+	bin/logstash -f configfile.conf --config.reload.automatic
+
+##INPUT & OUTPUT CONFIGURATIONS###
+	For some reason when defining an input file it wants the directory info to have forward slashes '/', but output wants back slashes '\'?
+
+Tips for DEBUGGING
+	use the above '--config.reload.automatic' tag above.
+	Test output
+	Clear output file and save
+	Make changes to .conf file and save
+	Should automatically refresh and produce new output.
